@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>
+			Sample Web Development
+		</title>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="Js.js"></script>
+	</head>
+	<body>
+		<h3 align = "center">State - Select year</h3>
+		<div align = "center" style ="padding-top:1%;">
+			<select id = "Index">
+			  <option value="1">1991</option>
+			  <option value="2">1992</option>
+			  <option value="3">1993</option>
+			  <option value="4">1994</option>
+			</select>
+			<button onclick="BarPlot()">BarPlot</button>
+		</div>
+		<div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+		<script>
+			function BarPlot() {
+				var index = document.getElementById("Index").value
+				if(index == "1")
+				{
+					var data = [
+						{
+						x: ['City1', 'City2', 'City3'],
+						y: [20, 14, 23],
+						type: 'bar'
+						}
+					];
+					Plotly.newPlot('myDiv', data);
+				}
+				else if(index == "2")
+				{
+					var data = [
+						{
+						x: ['City1', 'City2', 'City3'],
+						y: [20, 54, 73],
+						type: 'bar'
+						}
+					];
+					Plotly.newPlot('myDiv', data);
+				}
+				else if(index == "3")
+				{
+					var data = [
+						{
+						x: ['City1', 'City2', 'City3'],
+						y: [10, 44, 63],
+						type: 'bar'
+						}
+					];
+					Plotly.newPlot('myDiv', data);
+				}
+				else if(index == "4")
+				{
+					var data = [
+						{
+						x: ['City1', 'City2', 'City3'],
+						y: [60, 4, 93],
+						type: 'bar'
+						}
+					];
+					Plotly.newPlot('myDiv', data);
+				}
+			}
+			
+		</script>
+	</body>
+</html>
