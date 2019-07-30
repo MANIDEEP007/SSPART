@@ -1,0 +1,89 @@
+ <html>
+	<head>
+		<title>
+			Pie Charts
+		</title>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="Js.js"></script>
+	</head>
+	<body>
+		<h3 align = "center">Movies- Select year</h3>
+		<div align = "center" style ="padding-top:1%;">
+			<select id = "Index">
+			  <option value="1">2001</option>
+			  <option value="2">2002</option>
+			  <option value="3">2003</option>
+			  <option value="4">2004</option>
+			</select>
+			<button onclick="PieChart()">PieChart</button>
+		</div>
+		<div id="myDiv" align = "center"><!-- Plotly Pie chart will be drawn inside this DIV --></div>
+		<script>
+			function PieChart() {
+				var layout = {
+					height : 600,
+					width : 600
+				};
+				var color_var = ['rgb(255,0,0)','rgb(0,255,0)','rgb(0,0,255)'];
+				var index = document.getElementById("Index").value
+				if(index == "1")
+				{
+					var data = [
+						{
+						labels: ['Comedy', 'Horror', 'Fiction'],
+						values: [20, 40, 40],
+						type: 'pie',
+						marker: {
+									colors: color_var
+								}
+						}
+					];
+					Plotly.newPlot('myDiv', data, layout);
+				}
+				else if(index == "2")
+				{
+					var data = [
+						{
+						labels: ['Comedy', 'Horror', 'Fiction'],
+						values: [35, 20, 45],
+						type: 'pie',
+						marker: {
+									colors: color_var
+								}
+						}
+					];
+					Plotly.newPlot('myDiv', data, layout);
+				}
+				else if(index == "3")
+				{
+					var data = [
+						{
+						labels: ['Comedy', 'Horror', 'Fiction'],
+						values: [10, 41, 49],
+						type: 'pie',
+						marker: {
+									colors: color_var
+								}
+						}
+					];
+					Plotly.newPlot('myDiv', data,layout);
+				}
+				else if(index == "4")
+				{
+					var data = [
+						{
+						labels: ['Comedy', 'Horror', 'Fiction'],
+						values: [5, 91,4],
+						type: 'pie',
+						marker: {
+									colors: color_var
+								}
+						}
+					];
+					Plotly.newPlot('myDiv', data,layout);
+				}
+			}
+			
+		</script>
+	</body>
+</html>
