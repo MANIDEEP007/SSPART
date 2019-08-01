@@ -1,3 +1,31 @@
-div
+.dashboard-menu
 {
+	background-color : #343a40;
+}
+.dashboard-menu .navbar-brand
+{
+	color : white;
+	font-weight :bold !important;
+	font-family: 'Open Sans', sans-serif !important;
+}
+.dashboard-menu button
+{
+	outline : none;
+}
+.dashboard-menu button, .dashboard-menu i
+{
+	background-color : #343a40;
+	color : white;
+}
+.dashboard-menu .nav-link
+{
+	color : white !important;
+	font-family: 'Open Sans', sans-serif !important;
+}
+@media (min-width: 992px)
+{
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding-left : 2.5rem !important;	
+		font-size : 1.17rem !important;
+	}
 }
